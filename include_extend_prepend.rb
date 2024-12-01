@@ -1,3 +1,5 @@
+#### Difference between include, extend, and prepend####
+########################################################
 # Define a module with some methods
 module Greetings
   def hello
