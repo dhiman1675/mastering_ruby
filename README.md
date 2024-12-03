@@ -28,7 +28,7 @@ We welcome contributions from everyone! Here’s how you can get involved:
 2. **Clone Your Fork**:
     - Clone your fork to your local machine:
       ```bash
-      git clone https://github.com/your-username/ruby-programs-and-examples.git
+      git clone https://github.com/your-username/mastering_ruby.git
       cd ruby-programs-and-examples
       ```
 
