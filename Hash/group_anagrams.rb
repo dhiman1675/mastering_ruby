@@ -1,6 +1,8 @@
-#Q:Given an array of strings, group the anagrams together in a hash.
+# frozen_string_literal: true
+
+# Q:Given an array of strings, group the anagrams together in a hash.
 # Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
-# Output: { ["eat", "tea", "ate"] => 1, ["tan", "nat"] => 2, ["ban"] => 2}
+# Output: {{["eat", "tea", "ate"]=>3, ["tan", "nat"]=>2, ["bat"]=>1}
 
 def group_anagrams(words)
   anagram_groups = Hash.new { |hash, key| hash[key] = [] }
@@ -12,7 +14,7 @@ def group_anagrams(words)
   # anagram_group = {"aet"=>["eat", "tea", "ate"], "ant"=>["tan", "nat"], "abt"=>["bat"]}
   # Transform grouped anagrams into desired output format
   output = {}
-  anagram_groups.each do |_, group|
+  anagram_groups.each_value do |group|
     output[group] = group.size
   end
 
@@ -20,6 +22,6 @@ def group_anagrams(words)
 end
 
 # Test Input
-input = ["eat", "tea", "tan", "ate", "nat", "bat"]
+input = %w[eat tea tan ate nat bat]
 puts group_anagrams(input)
 # Output: {["eat", "tea", "ate"]=>3, ["tan", "nat"]=>2, ["bat"]=>1}

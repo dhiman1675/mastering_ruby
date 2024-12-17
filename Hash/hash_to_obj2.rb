@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# c
 class HashObject
   def initialize(hash)
     hash.each do |key, value|
@@ -6,7 +9,7 @@ class HashObject
   end
 end
 
-hash = { name: "Bob", city: "New York" }
+hash = { name: 'Bob', city: 'New York' }
 obj = HashObject.new(hash)
 
 puts obj

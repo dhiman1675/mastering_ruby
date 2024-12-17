@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def partition_hash(hash)
   hash.partition { |_, value| value.odd? }.map(&:to_h)
 end
@@ -12,4 +14,3 @@ puts "Hash after partition => #{partition_hash(input)}"
 
 puts "Select pairs from hash => #{filter_hash(input)}"
 # Output: {:b=>2, :c=>3, :d=>4}
-
