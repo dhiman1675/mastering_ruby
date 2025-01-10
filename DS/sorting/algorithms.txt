@@ -1,10 +1,10 @@
 ########################################################################################
 1: Bubble sort
 ________________________________________________________________________________________
-=> Works by comparing 2 items at a time and them swap them if nessary.
-   Need to repeat this process untilll end result
+=> Works by comparing 2 items at a time and then swap them if necessary.
+   Need to repeat this process untill done
 
-   ex => [9, 2, 1, 4, 3, 8]
+   ex:   [9, 2, 1, 4, 3, 8]
          step1: [2, 1, 4, 3, 8, 9]
          step2: [1, 2, 3, 4, 8, 9]
 => Time complexity
