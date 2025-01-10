@@ -4,6 +4,7 @@
 # input = 'A__&&BJH##'
 # output = "H__&&JBA##"
 
+# Version 1
 def reverse(str)
   reversed_chars = str.gsub(/[^a-zA-Z]/, '').chars.reverse
   res = str.chars
@@ -13,6 +14,7 @@ def reverse(str)
   res.join('')
 end
 
+# Version 2: without using regex
 @is_char = ->(c) { ('a'..'z').include?(c.downcase) }
 
 def reverse_without_regex(str)
@@ -24,7 +26,7 @@ def reverse_without_regex(str)
   str_arr.join('')
 end
 
-# upgraded version of reverse using AI
+# Version 3: upgraded version of Version 1 using AI
 def reverse_only_chars(str)
   reversed_chars = str_arr.scan(/[a-zA-Z]/).reverse
   result = str.chars.map do |char|

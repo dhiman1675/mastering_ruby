@@ -1,13 +1,15 @@
-#### Difference between include, extend, and prepend####
+# frozen_string_literal: true
+
+#### Difference between include, extend, and prepend ####
 ########################################################
 # Define a module with some methods
 module Greetings
   def hello
-    "Hello from Greetings!"
+    'Hello from Greetings!'
   end
 
   def goodbye
-    "Goodbye from Greetings!"
+    'Goodbye from Greetings!'
   end
 end
 
@@ -17,7 +19,7 @@ class Person
   include Greetings
 
   def hello
-    "Hello from Person!"
+    'Hello from Person!'
   end
 end
 
@@ -33,12 +35,12 @@ class Robot
   prepend Greetings
 
   def hello
-    "Hello from Robot!"
+    'Hello from Robot!'
   end
 end
 
 # Demonstrating the include behavior
-puts "Include Example:"
+puts 'Include Example:'
 person = Person.new
 puts person.hello    # Output: "Hello from Person!" (class method overrides included method)
 puts person.goodbye  # Output: "Goodbye from Greetings!" (method from the module)
