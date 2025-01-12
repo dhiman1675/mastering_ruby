@@ -23,3 +23,50 @@ ________________________________________________________________________________
 => Time complexity
    best case: Passes(O(n)) + Comparisons(O(n)) => O(n^2)
    worse case: Passes(O(n)) + Comparisons(on(n)) => O(n^2)
+
+########################################################################################
+3. Insertion sort
+----------------------------------------------------------------------------------------
+=> 1. Start with the first element as sorted(assumming it in the right position).
+
+   2. check with second element in array and compare it with first if the second element
+      is smaller than first. we will store the second element in a
+      variable(commonly called current) and shift the first to the right postion.
+
+      - in this we did not swap elements like other algorithms
+
+      - now the value at index 0 is empty as we shifted the value to the right. So now we can
+        insert the current variable value at index 0
+
+    3. Now we have 2 parts sorted and one part unsorted. So in every step, we will pick
+       one element from the unsorted part and put it in the sorted part
+
+       - to put it in the right position we will repeat the 2nd step, but the only difference
+         is from the sorted part we only move the needed element to the right.
+
+         EX = [2, 19, 5, 6]
+                current = 5
+                but we only move 19 to the right because it is smaller than 5 and it means it's in
+                the right position
+
+    4. repeat step 3
+
+=> Time complexity
+   best case: O(n)
+   worst case: O(n^2)
+
+########################################################################################
+4. Merge sort
+----------------------------------------------------------------------------------------
+=>  Merge sort breaks down a list into smaller lists and then sorts them and in the end
+    merges back those smaller sorted lists
+
+=> Divide the arrays from middle until they are not indivisible and then arrange them in
+   a sorted way
+
+
+=> Time complexity
+   best case: O(n log n)
+   worse case: O(n log n)
+
+=> Space complexity: O(n)
