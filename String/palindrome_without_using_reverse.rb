@@ -12,7 +12,3 @@ end
 
 puts palindrome?('racecar')  # => true
 puts palindrome?('hello')    # => false
-
-def count_vowels(str)
-  vowels = %w[a e u i o]
-end

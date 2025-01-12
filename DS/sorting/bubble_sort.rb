@@ -28,7 +28,8 @@ def bubble_sort2(arr)
   arr
 end
 
+input = [9, 2, 1, 4, 3, 8]
 input1 = [9, 2, 1, 4, 3, 8]
 
-puts bubble_sort(input1).join(',')
+puts bubble_sort(input).join(',')
 puts bubble_sort2(input1).join(',')
