@@ -22,7 +22,7 @@ def merge_sort(arr)
 end
 
 def merge(left, right)
-  puts "left: #{left}, right: #{right}"
+  puts "\nleft: #{left}, right: #{right}"
   sorted = []
   until left.empty? || right.empty?
     sorted << if left.first < right.first
@@ -33,31 +33,39 @@ def merge(left, right)
   end
 
   result = sorted + left + right # just store it in a variable to print it
-  puts "sorted: #{x}"
+  puts "sorted: #{result}"
   result
 end
 
-puts "Sorted array: #{merge_sort([3, 2, 1, 5, 4, 6, 7, 8, 9, 10]).join(' ')}"
+puts "\nSorted array: #{merge_sort([3, 2, 1, 5, 4, 6, 7, 8, 9, 10]).join(' ')}"
 
+# ----------------
 # Output
-# left: [3], right: [2]
-# sorted: [2, 3]
+# ----------------
 # left: [5], right: [4]
 # sorted: [4, 5]
+#
 # left: [1], right: [4, 5]
 # sorted: [1, 4, 5]
+#
 # left: [2, 3], right: [1, 4, 5]
 # sorted: [1, 2, 3, 4, 5]
+#
 # left: [6], right: [7]
 # sorted: [6, 7]
+#
 # left: [9], right: [10]
 # sorted: [9, 10]
+#
 # left: [8], right: [9, 10]
 # sorted: [8, 9, 10]
+#
 # left: [6, 7], right: [8, 9, 10]
 # sorted: [6, 7, 8, 9, 10]
+#
 # left: [1, 2, 3, 4, 5], right: [6, 7, 8, 9, 10]
 # sorted: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
 # Sorted array: 1 2 3 4 5 6 7 8 9 10
 #
 # Above you can see how recursion works and in the end, you will get a sorted array.
@@ -84,4 +92,8 @@ puts "Sorted array: #{merge_sort([3, 2, 1, 5, 4, 6, 7, 8, 9, 10]).join(' ')}"
 #              └── merge_sort([10]) -> Base case
 #              └── merge([10], [82]) -> Merge
 #      └── merge([27, 38, 43], [3, 9, 10, 82]) -> Final merge
-#
+# Merge Phase:
+# Step 1: [27, 43] + [38] = [27, 38, 43]
+# Step 2: [3, 9] + [10, 82] = [3, 9, 10, 82]
+# Step 3: [27, 38, 43] + [3, 9, 10, 82] = [3, 9, 10, 27, 38, 43, 82]
+# Final sorted array: [3, 9, 10, 27, 38, 43, 82]

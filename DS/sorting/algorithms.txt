@@ -1,4 +1,7 @@
 ########################################################################################
+##### SORTING ALGORITHMS ###############################################################
+########################################################################################
+########################################################################################
 1: Bubble sort
 ________________________________________________________________________________________
 => Works by comparing 2 items at a time and then swap them if necessary.
@@ -9,7 +12,7 @@ ________________________________________________________________________________
          step2: [1, 2, 3, 4, 8, 9]
 => Time complexity
     best case: O(n)
-    worse case: O(n^2)
+    worst case: O(n^2)
 
 
 ########################################################################################
@@ -22,12 +25,12 @@ ________________________________________________________________________________
 
 => Time complexity
    best case: Passes(O(n)) + Comparisons(O(n)) => O(n^2)
-   worse case: Passes(O(n)) + Comparisons(on(n)) => O(n^2)
+   worst case: Passes(O(n)) + Comparisons(on(n)) => O(n^2)
 
 ########################################################################################
 3. Insertion sort
 ----------------------------------------------------------------------------------------
-=> 1. Start with the first element as sorted(assumming it in the right position).
+=> 1. Start with the first element as sorted(assumming it in the right position)
 
    2. check with second element in array and compare it with first if the second element
       is smaller than first. we will store the second element in a
@@ -67,6 +70,51 @@ ________________________________________________________________________________
 
 => Time complexity
    best case: O(n log n)
-   worse case: O(n log n)
+   worst case: O(n log n)
 
 => Space complexity: O(n)
+
+########################################################################################
+5. Quick sort
+----------------------------------------------------------------------------------------
+=> Is the one of the most used sorting algorithm
+
+=> We start by selecting a item which we call pivot. Then we rearrange the items according
+   to the pivot like all the items smaller then pivot to left side and all the items
+   greator than the pivot to the right side of the pivot and this approch is called
+   partitioning
+
+=> Generally we take last item as pivot but there are variation of this algorithm where we
+    choose first item as pivot
+
+=> Then we move pivot to the right position means all the item to left are smaller than
+    pivot and all the item right are greater
+
+=> Then we need to repeat this process to the arrays left and right to the pivot.
+
+=> Which every partition we narrow down the scope of work and thats by quicksort has
+   logarithmic complexity.
+
+=> Partitioning
+    - `i` for iteration and `b` for left partition boundary
+    - Initially, we set `b` to -1, assuming that there is only a right partition
+    - `b` is like the end of the left partition
+    - We iterate over the array and check if the item is smaller than the pivot or not
+      If yes, then we swap the item to the left and increment the boundary by 1
+    - When all the smaller numbers are on the left, we need to put the pivot after the left
+      partition, and now the boundary holds its index
+
+=> Time complexity: best = O(n log n), worst = O(n^2)
+=> Space complexity: best = O(log n), worst = O(n)
+
+=> We can prefer Quick sort over Merge sort because Quick sort requires less space
+
+########################################################################################
+6. Counting sort
+----------------------------------------------------------------------------------------
+=>
+
+########################################################################################
+7. Bucket sort
+----------------------------------------------------------------------------------------
+=>
