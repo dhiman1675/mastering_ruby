@@ -109,10 +109,38 @@ ________________________________________________________________________________
 
 => We can prefer Quick sort over Merge sort because Quick sort requires less space
 
+***************************************************************************************
+**
+*
+-> All the sorting above algorithms used comparison to sort the array. But the bellow
+   algorithms do not comparison, instead they use basic maths
+
+-> Time-memory Trade-off
+    Make the algorith run fast but at the cost of extra memory
+*
+**
+***************************************************************************************
+
 ########################################################################################
 6. Counting sort
 ----------------------------------------------------------------------------------------
-=>
+
+=> Suppose you have list of integers from range: [0, k]
+=> Instead of comparison we count the occurrence of each elements and store the count on
+   that particular index of another array and used that sort the array
+
+   Ex: Input array = [1, 5, 2, 4, 3, 5, 1]
+       store data we like: [index0: 0, index1: 2, index2: 1, index3: 1, index4: 1,
+        index5: 2]
+
+=> Time complexity: best = O(n)
+=> Space complexity: best = O(k) because we need to allocate extra space to store counts
+
+=> But the values should be positive integers as we are using an array to store data and
+   an array does not have negative indexes
+
+=> It's best if the values are in the range present in the input array; otherwise, we will
+   end up with lots of zero/empty elements in the counts array
 
 ########################################################################################
 7. Bucket sort
