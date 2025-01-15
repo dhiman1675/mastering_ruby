@@ -18,6 +18,6 @@ child = Child.new
 puts child.greet('Rohit') # Output: "Hello, ROHIT!"
 
 # NOTES
-# super() No arguments passed
+# super() = No arguments passed
 # But if you want to modify the arguments then you can use super()
-# super This will automatically passed the argument to the parent method
+# super =This will automatically passed the argument to the parent method

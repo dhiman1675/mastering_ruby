@@ -110,7 +110,7 @@ ________________________________________________________________________________
 => We can prefer Quick sort over Merge sort because Quick sort requires less space
 
 ***************************************************************************************
-**
+** Points to note
 *
 -> All the sorting above algorithms used comparison to sort the array. But the bellow
    algorithms do not comparison, instead they use basic maths
@@ -145,4 +145,25 @@ ________________________________________________________________________________
 ########################################################################################
 7. Bucket sort
 ----------------------------------------------------------------------------------------
-=>
+=> Bucker sort is to distribute itmes in a number of buckets. sort these buckets using
+   another sorting algorithm and them combine them
+
+=> We create x number of buckets and put elements in these buckets using a formula:
+
+    bucket = item / numberOfBuckets
+
+=> Then sort these buckets using another algorithm
+
+=> Iterate over these buckets and put items in the input array
+
+=> For number of buckets there no predefined suggestion or value. but only think we need
+   to keep in mind is: more buckets means more memory we need allocate
+
+=> Space complexity: O(n + k) => n for number of lement, k for number buckets
+   TIme complexity: Best: O(n + k ) => O(n)
+                    Worse: O(n ^ 2)
+
+                    - O(n) more buckets more space but speed
+                    - O(n ^ 2) Fewer buckets less space with less speed
+
+                    - This is another example time memory trade off
