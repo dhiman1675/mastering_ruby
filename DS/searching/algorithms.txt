@@ -4,8 +4,8 @@
 ########################################################################################
 1: Linear Search
 ________________________________________________________________________________________
-=> Simplest algorithm: We iterate over the list, if we find the item, then we return its index;
-   otherwise, -1 means item not found.
+=> Simplest algorithm: We iterate over the list, if we find the item, we return its index;
+   otherwise, -1 means the item is not found.
 
 => Time complexity:
       Best: O(1) = item is the first item in the array
@@ -15,16 +15,16 @@ ________________________________________________________________________________
 2. Binary Search
 ----------------------------------------------------------------------------------------
 => Binary search is faster than linear search, but it only works on a sorted list. If the
-   list is not sorted, then first we need to sort it.
+   list is not sorted, we need to sort it first.
 
-=> Then first we find the middle item like: middle = (left + right) / 2
+=> First, we find the middle item like: middle = (left + right) / 2
 
                Ex: (0 + 9) / 2 = 4
 => After calculating the middle, we compare it with the element
-   - we will return middle if item equal to middle
-   - If the item is less than the middle, then we will do the same steps on the left
-     partition
-   - If the item is greater than the middle, we will do the same on the right partition
+   - we will return the middle if the item is equal to the middle
+   - If the item is less than the middle, we will do the same steps on the left
+     partition.
+   - If the item is greater than the middle, we will do the same on the right partition.
 
 => Binary Search is another example of divide and conquer algorithms
 
@@ -34,17 +34,17 @@ ________________________________________________________________________________
 ########################################################################################
 3. Ternary Search
 ----------------------------------------------------------------------------------------
-=> This is very similar to binary search but instead of dividing the list into 2 parts,
-   we divide it into 3 parts
+=> This is very similar to binary search, but instead of dividing the list into 2 parts,
+   we divide it into 3 parts.
 
-=> In this, we have 2 mid points: mid1 and mid2
+=> In this, we have 2 midpoints: mid1 and mid2.
 
-=> To calculate the 2 middle points first we will calculate the partitionSize
+=> To calculate the 2 middle points, first we will calculate the partition size:
       partitionSize = (right - left) / 3
       - mid1 = left + partitionSize
       - mid2 = right - partitionSize
 
-=> Then, similar to binary search, compare the element with the mids. If not matched, then
+=> Then, similar to binary search, compare the element with the mids. If not matched,
     find the right partition and repeat the steps.
 
 => Time complexity: O((log base 3) n)
@@ -53,10 +53,30 @@ ________________________________________________________________________________
 ########################################################################################
 4. Jump Search
 ----------------------------------------------------------------------------------------
-=> Its an improvement Linear search, but its not as fast as binary search
+=> It's an improvement to linear search, but it's not as fast as binary search.
 
-=>
+=> In jump search, we divide the list into a few blocks, and instead of iterating the whole
+   list, we can directly jump to the specific part where the target item may live.
+
+=> Block size = sqrt of the number of items in the array.
+
+=> From each block, we can compare the last item with the target to check in which block it
+   exists.
+
+=> When we find the block, we can perform a linear search on that particular block.
+
+=> Time complexity: O(sqrt of n)
 
 ########################################################################################
 5. Exponential Search
 ----------------------------------------------------------------------------------------
+=> The ideal exponential search is to start with a smaller range and see if the target item is
+   in the range or not. If not, then double the range.
+
+=> After we find the range in which the target is present, we will perform a binary search
+   on that range.
+
+=> Finally, we can perform a binary search on the range: [boundary / 2, boundary]
+    because in the last range, the target will not be present, which is why we double the boundary.
+
+=> Time complixity: O(log n)
