@@ -11,7 +11,7 @@ def exponential_search(arr, target)
   right = [boundary, length - 1].min
   res = binary_search(arr[left..right], target)
   # just because I am using my previous implementation of binary seacrch and
-  # I am only passing a range of list to binary seacrch
+  # I am only passing a range of list to binary search
   !res.negative? ? res + left : res
 end
 

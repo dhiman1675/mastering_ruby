@@ -40,13 +40,13 @@ end
 
 # Example Usage
 arr = [1, 3, 5, 7, 9]
-puts binary_search(arr, 5) # Output: 2
-puts binary_search(arr, 8) # Output: -1
+# puts binary_search(arr, 5) # Output: 2
+# puts binary_search(arr, 8) # Output: -1
 
 # Binary search is searching algorithm which works in sorted arrays.
 # Fist separates the array from mid, if the target value is less than the middle element,
 # the search continues in the left half. Otherwise, it searches in the right half
 
 # Binary search using Recursion
-puts binary_search(arr, 222)
-puts binary_search(arr, 9)
+# puts binary_search(arr, 222)
+# puts binary_search(arr, 9)
