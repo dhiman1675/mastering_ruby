@@ -39,4 +39,4 @@ end
 
 puts group_anagrams(words).inspect
 puts group_anagrams_v2(words).inspect
-puts group_anagrams_v3(words).inspect
+p group_anagrams_v3(words)
