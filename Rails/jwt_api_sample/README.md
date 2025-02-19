@@ -1,5 +1,7 @@
 # README
 
+jwt_api_sample project using Rails 8.0.1
+
 This API's will allow users to:
 
 * Register and log in.
@@ -11,9 +13,9 @@ This API's will allow users to:
 
 1. Register User
    POST /api/v1/register
-   
+
 Body
-   
+
 
     {
     "name": "John Doe",
@@ -24,7 +26,7 @@ Body
 
 2. Login User
    POST /api/v1/login
-   
+
 Body
 
     {
@@ -34,7 +36,7 @@ Body
 
 3. Get User Details
    GET /api/v1/user
-   
+
 Body
 
       {
