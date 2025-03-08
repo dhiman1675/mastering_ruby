@@ -48,3 +48,21 @@ puts longest_unique_substring_v2('bbbbb')    # Output: "b"
 puts longest_unique_substring_v2('pwwkew')   # Output: "wke"
 puts longest_unique_substring_v2('abcdcef')  # Output: "abcd"
 
+def longest_unique_substring_v3(str)
+  char_map = {}
+  left = 0
+  max_length = 0
+  longest_sub_string = ''
+  str.chars.each_with_index do |c, right|
+    left = char_map[c] + 1 if char_map[c] && char_map[c] >= left
+
+    char_map[c] = right
+    current_length = right - left + 1
+
+    if current_length > max_length
+      max_length = current_length
+      longest_sub_string = str[left..right]
+    end
+  end
+  longest_sub_string
+end
