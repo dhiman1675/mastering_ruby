@@ -9,7 +9,6 @@ def fetch_geocode_data(location)
   http.use_ssl = true # Enable HTTPS
 
   request = Net::HTTP::Get.new(url)
-  request['User-Agent'] = 'BugBusterApp/1.0 (contact@example.com)' # Replace with your email
 
   response = http.request(request)
 
